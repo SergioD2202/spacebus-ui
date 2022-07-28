@@ -18,5 +18,13 @@
     "plugin:prettier/recommended",
     "prettier"
   ],
-  "rules": {}
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
+  }
+  
 }
