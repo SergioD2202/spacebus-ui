@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+$theme-colors: (
+  "primary": #00266b,
+);
+
+@import '~bootstrap/scss/bootstrap.scss';
