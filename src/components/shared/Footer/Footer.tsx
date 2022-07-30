@@ -6,7 +6,7 @@ interface FooterProps {}
 
 const Footer: FC<FooterProps> = () => (
   <div className={styles.Footer} data-testid="Footer">
-    Footer Component
+    Created by Spacebus Co. 2022
   </div>
 );
 
