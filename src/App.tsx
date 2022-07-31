@@ -10,6 +10,7 @@ import Footer from './components/shared/Footer/Footer';
 //Page imports
 import Home from './components/pages/Home/Home';
 import Signup from './components/pages/Signup/Signup';
+import Login from './components/pages/Login/Login';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/spacebus-ui/" element={<Home />} />
           <Route path="/spacebus-ui/sign-up" element={<Signup />} />
+          <Route path="/spacebus-ui/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
       <Footer />
