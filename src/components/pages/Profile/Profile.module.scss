@@ -1,0 +1,19 @@
+$primaryFont: 'Roboto', sans-serif;
+$tablet: 840px;
+$phone: 650px;
+
+.Profile {
+    width: 90%;
+    min-height: 70vh;
+    margin-top: 10rem;
+
+    .profileImage {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+
+    .boldLabel {
+        font-weight: bold;
+    }
+}
