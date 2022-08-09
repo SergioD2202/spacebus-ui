@@ -11,31 +11,44 @@ const Profile: FC<ProfileProps> = () => (
       <div className="d-none d-lg-flex justify-content-between">
         <div className="w-100">
           <div className="d-flex align-items-center">
-            <div className={styles.profileImage + ' bg-primary'}></div>
-            <div className="d-flex flex-column align-items-center ms-5">
-              <span className="mb-2">Name LastName</span>
-              <span>Username</span>
+            <div className="d-flex align-items-center flex-column">
+              <div className={styles.profileImage + ' bg-primary mb-3'}></div>
+              <div className="d-flex flex-column align-items-center">
+                <span
+                  className={
+                    styles.dataLabel + ' ' + styles.bold + ' bold text-primary'
+                  }
+                >
+                  Empleado
+                </span>
+                <span
+                  className={
+                    styles.dataLabel + ' ' + styles.bold + ' bold text-primary'
+                  }
+                >
+                  Balance: 1000000
+                </span>
+              </div>
             </div>
-          </div>
-          <div className="d-flex mt-3 w-100 align-items-between">
-            <div className="d-flex flex-column align-items-center">
-              <span className={styles.boldLabel + ' text-primary'}>
-                Empleado
-              </span>
-              <span className={styles.boldLabel + ' text-primary'}>
-                Balance: 1000000
-              </span>
+            <div className="d-flex align-items-center flex-column ms-5">
+              <div className="d-flex flex-column align-items-center">
+                <span className={styles.dataLabel + ' mb-2'}>
+                  Name LastName
+                </span>
+                <span className={styles.dataLabel}>Username</span>
+              </div>
+              <div className="d-flex mt-3 w-100 align-items-center justify-content-center">
+                <button
+                  type="button"
+                  className={
+                    styles.buttonEdit +
+                    ' btn btn-warning text-dark text-center p-1 shadow-sm'
+                  }
+                >
+                  Edit Personal Info
+                </button>
+              </div>
             </div>
-
-            <button
-              type="button"
-              className={
-                styles.boldLabel +
-                ' btn btn-warning text-dark text-center p-1 shadow-sm'
-              }
-            >
-              Edit Personal Info
-            </button>
           </div>
         </div>
 
