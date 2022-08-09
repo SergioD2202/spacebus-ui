@@ -3,14 +3,12 @@ $tablet: 840px;
 $phone: 650px;
 
 .Auth {
-    min-height: 100vh;
     font-family: $primaryFont;
 
     .imageContainer {
         position: relative;
-        margin-top: 10px;
         .mainImage {
-            width: 100%;
+            width: 800px;
             height: 520px;
         }
     }
@@ -18,7 +16,7 @@ $phone: 650px;
     .titleContainer {
         position: absolute;
         width: 383px;
-        height: 446px;
+        height: 36px;
         left: 863px;
         top: 87px;
         display: flex;

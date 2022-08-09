@@ -8,11 +8,16 @@ interface AuthProps {}
 const Auth: FC<AuthProps> = () => (
   <div className={styles.Auth} data-testid="Auth">
     <div className={styles.imageContainer}>
-      <img src={jupiter} alt="jupiter.jpg" className={styles.mainImage}/>
+      <img
+        src={jupiter}
+        alt="jupiter.jpg"
+        className={styles.mainImage + ' d-none d-lg-block'}
+        loading="lazy"
+      />
       <div className={styles.titleContainer}>
         <div className={styles.title}>Login</div>
         <div className={styles.subtitle}>Usuario</div>
-        <div className={styles.subtitle2}>Contrase&ntilde;a.</div>
+        <div className={styles.subtitle2}>Contrase&ntilde;a</div>
       </div>
     </div>
   </div>
