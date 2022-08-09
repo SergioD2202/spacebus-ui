@@ -1,1 +1,69 @@
-.Auth {}
+$primaryFont: 'Roboto', sans-serif;
+$tablet: 840px;
+$phone: 650px;
+
+.Auth {
+    min-height: 100vh;
+    font-family: $primaryFont;
+
+    .imageContainer {
+        position: relative;
+        margin-top: 10px;
+        .mainImage {
+            width: 100%;
+            height: 520px;
+        }
+    }
+
+    .titleContainer {
+        position: absolute;
+        width: 383px;
+        height: 446px;
+        left: 863px;
+        top: 87px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        color:black;
+        text-align: left;
+
+        .title {
+            width: 530px;
+            font-weight: 700;
+            font-size: 26px;
+        }
+
+        .subtitle {
+            width: 60px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .subtitle2 {
+            width: 83px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        @media (max-width: $tablet) {
+            height: 36px;
+            left: 203px;
+            top: 167px;
+            .title {
+                width: 383px;
+            }
+
+            .subtitle {
+                left: 272px;
+                top: 277px;
+            }
+
+            .subtitle2 {
+                left: 272px;
+                top: 379px;
+            }
+        }
+    }
+}
