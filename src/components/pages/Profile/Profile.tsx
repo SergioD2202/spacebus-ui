@@ -30,7 +30,7 @@ const Profile: FC<ProfileProps> = () => (
                 </span>
               </div>
             </div>
-            <div className="d-flex align-items-center flex-column ms-5">
+            <div className="d-flex align-items-center justify-content-start flex-column ms-5">
               <div className="d-flex flex-column align-items-center">
                 <span className={styles.dataLabel + ' mb-2'}>
                   Name LastName
@@ -42,7 +42,7 @@ const Profile: FC<ProfileProps> = () => (
                   type="button"
                   className={
                     styles.buttonEdit +
-                    ' btn btn-warning text-dark text-center p-1 shadow-sm'
+                    ' btn btn-warning text-dark text-center p-2 shadow-sm'
                   }
                 >
                   Edit Personal Info
@@ -57,7 +57,41 @@ const Profile: FC<ProfileProps> = () => (
         </div>
       </div>
 
-      <div className="d-flex d-lg-none">Prueba</div>
+      <div className="d-flex flex-column align-items-center d-lg-none">
+        <div className="d-flex align-items-center flex-column">
+          <div className={styles.profileImage + ' bg-primary mb-4'}></div>
+          <div className="d-flex flex-column align-items-center">
+            <span
+              className={
+                styles.dataLabel + ' ' + styles.bold + ' bold text-primary mb-2'
+              }
+            >
+              Empleado
+            </span>
+            <span
+              className={
+                styles.dataLabel + ' ' + styles.bold + ' bold text-primary mb-3'
+              }
+            >
+              Balance: 1000000
+            </span>
+          </div>
+          <span className={styles.dataLabel + ' mb-2'}>Name LastName</span>
+          <span className={styles.dataLabel + ' mb-3'}>Username</span>
+          <button
+            type="button"
+            className={
+              styles.buttonEdit +
+              ' btn btn-warning text-dark text-center p-2 shadow-sm mb-5'
+            }
+          >
+            Edit Personal Info
+          </button>
+          <div className="mb-5">
+            <Options view="client" />
+          </div>
+        </div>
+      </div>
     </div>
   </>
 );

@@ -1,3 +1,5 @@
+$phone: 650px;
+
 .Options {
     width: 382px;
     height: 300px;
@@ -18,5 +20,11 @@
         &:hover {
             color: #5cb85c !important;
         }
+    }
+
+    @media (max-width: $phone) {
+        width: 260px;
+        height: 240px;
+        font-size: 20px;
     }
 }

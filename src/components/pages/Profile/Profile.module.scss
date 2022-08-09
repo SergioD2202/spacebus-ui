@@ -4,13 +4,21 @@ $phone: 650px;
 
 .Profile {
     width: 90%;
-    min-height: 70vh;
     margin-top: 10rem;
+
+    @media (max-width: 991px) {
+        margin-top: 3rem;
+    }
 
     .profileImage {
         width: 200px;
         height: 200px;
         border-radius: 50%;
+
+        @media (max-width: $phone) {
+            width: 150px;
+            height: 150px;
+        }
     }
 
     .buttonEdit {
@@ -20,6 +28,10 @@ $phone: 650px;
 
     .dataLabel {
         font-size: 24px;
+
+        @media (max-width: $phone) {
+            font-size: 20px;
+        }
     }
 
     .bold {
