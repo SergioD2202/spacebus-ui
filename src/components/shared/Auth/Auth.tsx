@@ -14,10 +14,12 @@ const Auth: FC<AuthProps> = () => (
         className={styles.mainImage + ' d-none d-lg-block'}
         loading="lazy"
       />
+      <div className={styles.loginContainer}>
+        <div className={styles.login}>Login</div>
+      </div>
       <div className={styles.titleContainer}>
-        <div className={styles.title}>Login</div>
-        <div className={styles.subtitle}>Usuario</div>
-        <div className={styles.subtitle2}>Contrase&ntilde;a</div>
+        <div className={styles.user}>Usuario</div>
+        <div className={styles.password}>Contrase&ntilde;a</div>
       </div>
     </div>
   </div>
