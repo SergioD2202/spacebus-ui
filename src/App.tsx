@@ -12,6 +12,7 @@ import Home from './components/pages/Home/Home';
 import Signup from './components/pages/Signup/Signup';
 import Login from './components/pages/Login/Login';
 import Profile from './components/pages/Profile/Profile';
+import PurchasedTickets from './components/pages/PurchasedTickets/PurchasedTickets';
 
 function App() {
   return (
@@ -25,6 +26,12 @@ function App() {
           <Route
             path="/spacebus-ui/profile"
             element={true ? <Profile /> : <Navigate to="/spacebus-ui/" />}
+          />
+          <Route
+            path="/spacebus-ui/purchased-tickets"
+            element={
+              true ? <PurchasedTickets /> : <Navigate to="/spacebus-ui/" />
+            }
           />
           <Route
             path="/spacebus-ui/error"
