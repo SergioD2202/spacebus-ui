@@ -6,7 +6,6 @@ $phone: 650px;
     font-family: $primaryFont;
 
     .imageContainer {
-        position: relative;
         .mainImage {
             width: 850px;
             height: 520px;
@@ -14,17 +13,12 @@ $phone: 650px;
     }
 
     .loginContainer {
-        position: absolute;
         width: 383px;
         height: 36px;
         left: 863px;
         top: 87px;
-
-        .login {
-            width: 530px;
-            font-weight: 700;
-            font-size: 26px;
-        }
+        font-weight: 700;
+        font-size: 26px;
 
         @media (max-width: $tablet) {
             left: 203px;
@@ -45,14 +39,14 @@ $phone: 650px;
         left: 863px;
         top: 139px;
         color: #00266B;
+        font-weight: 600;
+        font-size: 14px;
 
         .user {
             width: 60px;
             height: 19px;
             left: 886px;
             top: 161px;
-            font-weight: 600;
-            font-size: 14px;
         }
 
         .password {
@@ -60,8 +54,16 @@ $phone: 650px;
             height: 19px;
             left: 886px;
             top: 262px;
-            font-weight: 600;
-            font-size: 14px;
+        }
+
+        .button {
+            width: 115px;
+            height: 46px;
+            left: 983px;
+            top: 395px;
+            text-align: center;
+            background-color: #00266B;
+            color: #FFFFFF;
         }
 
         @media (max-width: $tablet) {
