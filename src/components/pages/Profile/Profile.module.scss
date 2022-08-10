@@ -1,0 +1,40 @@
+$primaryFont: 'Roboto', sans-serif;
+$tablet: 840px;
+$phone: 650px;
+
+.Profile {
+    width: 90%;
+    margin-top: 10rem;
+
+    @media (max-width: 991px) {
+        margin-top: 3rem;
+    }
+
+    .profileImage {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+
+        @media (max-width: $phone) {
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    .buttonEdit {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .dataLabel {
+        font-size: 24px;
+
+        @media (max-width: $phone) {
+            font-size: 20px;
+        }
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+}

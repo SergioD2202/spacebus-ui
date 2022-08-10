@@ -1,0 +1,30 @@
+$phone: 650px;
+
+.Options {
+    width: 382px;
+    height: 300px;
+    background-color: #F9F9F9;
+    font-size: 24px;
+    font-weight: bold;
+
+    .title {
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .option {
+        text-decoration: none;
+        margin-bottom: 1rem;
+        transition: 0.4s;
+
+        &:hover {
+            color: #5cb85c !important;
+        }
+    }
+
+    @media (max-width: $phone) {
+        width: 260px;
+        height: 240px;
+        font-size: 20px;
+    }
+}
