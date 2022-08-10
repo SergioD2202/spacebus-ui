@@ -6,7 +6,7 @@ import Ticket from './Ticket';
 describe('<Ticket />', () => {
   test('it should mount', () => {
     render(<Ticket />);
-    
+
     const ticket = screen.getByTestId('Ticket');
 
     expect(ticket).toBeInTheDocument();

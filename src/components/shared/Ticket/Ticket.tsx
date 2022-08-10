@@ -11,7 +11,7 @@ interface TicketProps {
 }
 
 const Ticket: FC<TicketProps> = (props) => (
-  <div className={styles.Ticket} data-testid="Ticket">
+  <div className={styles.Ticket + ' shadow-sm rounded'} data-testid="Ticket">
     {props.description}
   </div>
 );
