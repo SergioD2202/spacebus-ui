@@ -9,7 +9,12 @@ interface HomeProps {}
 const Home: FC<HomeProps> = () => (
   <div className={styles.Home} data-testid="Home">
     <div className={styles.imageContainer}>
-      <img src={mainImage} alt="main image.webp" className={styles.mainImage} />
+      <img
+        src={mainImage}
+        alt="main image.webp"
+        className={styles.mainImage}
+        loading="lazy"
+      />
       <div className={styles.titleContainer}>
         <div className={styles.title}>
           Conoce lo que el universo tiene para ti
@@ -22,7 +27,12 @@ const Home: FC<HomeProps> = () => (
     </div>
 
     <div className={styles.imageContainer}>
-      <img src={exoplanets} alt="exoplanets.jpg" className={styles.mainImage} />
+      <img
+        src={exoplanets}
+        alt="exoplanets.jpg"
+        className={styles.mainImage}
+        loading="lazy"
+      />
       <div className={styles.titleContainer}>
         <div className={styles.title}>Mira nuestra selección</div>
         <div className={styles.subtitle}>
