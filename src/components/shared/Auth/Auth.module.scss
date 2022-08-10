@@ -8,7 +8,7 @@ $phone: 650px;
     .imageContainer {
         position: relative;
         .mainImage {
-            width: 800px;
+            width: 850px;
             height: 520px;
         }
     }
@@ -40,21 +40,19 @@ $phone: 650px;
     }
 
     .titleContainer {
-        position: absolute;
         width: 372px;
         height: 342px;
         left: 863px;
         top: 139px;
+        color: #00266B;
 
         .user {
-            position: absolute;
             width: 60px;
             height: 19px;
             left: 886px;
             top: 161px;
             font-weight: 600;
             font-size: 14px;
-            color: #00266B;
         }
 
         .password {
@@ -64,7 +62,6 @@ $phone: 650px;
             top: 262px;
             font-weight: 600;
             font-size: 14px;
-            color: #00266B;
         }
 
         @media (max-width: $tablet) {
