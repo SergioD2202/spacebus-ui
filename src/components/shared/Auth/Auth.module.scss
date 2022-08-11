@@ -17,9 +17,6 @@ $phone: 650px;
         font-size: 26px;
         height: 80vh;
 
-        @media (max-width: $tablet) {
-        }
-
         @media (max-width: $phone) {
             width: 310px;
             height: 31px;
@@ -48,14 +45,14 @@ $phone: 650px;
             color: #FFFFFF;
         }
 
-        @media (max-width: $tablet) {
-            .user {
+        @media (max-width: 1110px) {
+            width: 340px;
+            height: 320px;
+        }
 
-            }
-
-            .password {
-                
-            }
+        @media (max-width: 992px) {
+            width: 372px;
+            height: 342px;
         }
 
         @media (max-width: $phone) {

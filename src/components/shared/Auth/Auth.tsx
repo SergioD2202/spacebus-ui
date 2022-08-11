@@ -22,7 +22,7 @@ const Auth: FC<AuthProps> = () => (
     <div
       className={
         styles.loginContainer +
-        ' d-flex align-items-center justify-content-center flex-column w-50 ms-5'
+        ' d-flex align-items-center justify-content-center flex-column w-50 mx-auto'
       }
     >
       <div className="d-flex flex-column align-items-start">
