@@ -7,11 +7,11 @@ interface AuthProps {}
 
 const Auth: FC<AuthProps> = () => (
   <div className={styles.Auth + ' mx-auto'} data-testid="Auth">
-    <div className="d-none d-lg-flex justify-content-between">
+    <div className="d-lg-flex justify-content-between">
       <div className="w-100">
-        <div className="d-flex align-items-center">
-          <div className="d-flex align-items-center flex-column">
-            <div className={styles.imageContainer + ' d-none d-lg-flex'}>
+        <div className="d-flex align-items-center w-100">
+          <div className="d-none d-lg-flex align-items-center flex-column w-75">
+            <div className={styles.imageContainer + ' d-none d-lg-block'}>
               <img
                 src={jupiter}
                 alt="jupiter.jpg"

@@ -7,7 +7,6 @@ $phone: 650px;
 
     .imageContainer {
         .mainImage {
-            width: 850px;
             height: 520px;
         }
     }
@@ -15,29 +14,22 @@ $phone: 650px;
     .loginContainer {
         width: 383px;
         height: 36px;
-        left: 863px;
-        top: 87px;
         font-weight: 700;
         font-size: 26px;
 
         @media (max-width: $tablet) {
-            left: 203px;
-            top: 167px;
+
         }
 
         @media (max-width: $phone) {
             width: 310px;
             height: 31px;
-            left: 60px;
-            top: 162px;
         }
     }
 
     .titleContainer {
         width: 372px;
         height: 342px;
-        left: 863px;
-        top: 139px;
         color: #00266B;
         font-weight: 600;
         font-size: 14px;
@@ -45,22 +37,16 @@ $phone: 650px;
         .user {
             width: 60px;
             height: 19px;
-            left: 886px;
-            top: 161px;
         }
 
         .password {
             width: 83px;
             height: 19px;
-            left: 886px;
-            top: 262px;
         }
 
         .button {
             width: 115px;
             height: 46px;
-            left: 983px;
-            top: 395px;
             text-align: center;
             background-color: #00266B;
             color: #FFFFFF;
@@ -68,13 +54,11 @@ $phone: 650px;
 
         @media (max-width: $tablet) {
             .user {
-                left: 272px;
-                top: 277px;
+
             }
 
             .password {
-                left: 272px;
-                top: 379px;
+                
             }
         }
 
@@ -82,15 +66,11 @@ $phone: 650px;
             .user {
                 width: 52px;
                 height: 14px;
-                left: 112px;
-                top: 243px;
             }
 
             .password {
                 width: 74px;
                 height: 15px;
-                left: 112px;
-                top: 303px;
             }
         }
     }
