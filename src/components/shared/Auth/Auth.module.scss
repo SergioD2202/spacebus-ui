@@ -1,24 +1,23 @@
 $primaryFont: 'Roboto', sans-serif;
-$tablet: 840px;
+$tablet: 992px;
 $phone: 650px;
 
 .Auth {
     font-family: $primaryFont;
+    min-height: 80vh;
 
-    .imageContainer {
-        .mainImage {
-            height: 520px;
-        }
+    .mainImage {
+        width: 65%;
+        height: 769px;
+        object-fit: cover;
     }
 
     .loginContainer {
-        width: 383px;
-        height: 36px;
         font-weight: 700;
         font-size: 26px;
+        height: 80vh;
 
         @media (max-width: $tablet) {
-
         }
 
         @media (max-width: $phone) {
@@ -33,22 +32,19 @@ $phone: 650px;
         color: #00266B;
         font-weight: 600;
         font-size: 14px;
+        background-color: #F8F9FA;
+        border-radius: 16px;
 
         .user {
-            width: 60px;
-            height: 19px;
         }
 
         .password {
-            width: 83px;
-            height: 19px;
         }
 
         .button {
             width: 115px;
             height: 46px;
             text-align: center;
-            background-color: #00266B;
             color: #FFFFFF;
         }
 

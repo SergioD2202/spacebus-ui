@@ -1,48 +1,47 @@
 import React, { FC } from 'react';
 import styles from './Auth.module.scss';
-import jupiter from '../../../images/jupiter.jpg';
+import space from '../../../images/space.jpg';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface AuthProps {}
 
 const Auth: FC<AuthProps> = () => (
-  <div className={styles.Auth + ' mx-auto'} data-testid="Auth">
-    <div className="d-lg-flex justify-content-between">
-      <div className="w-100">
-        <div className="d-flex align-items-center w-100">
-          <div className="d-none d-lg-flex align-items-center flex-column w-75">
-            <div className={styles.imageContainer + ' d-none d-lg-block'}>
-              <img
-                src={jupiter}
-                alt="jupiter.jpg"
-                className={styles.mainImage}
-                loading="lazy"
-              />
-            </div>
+  <div
+    className={
+      styles.Auth +
+      ' d-flex align-items-center align-items-lg-start justify-content-lg-between w-100'
+    }
+    data-testid="Auth"
+  >
+    <img
+      src={space}
+      alt="jupiter.jpg"
+      className={styles.mainImage + ' d-none d-lg-block'}
+      loading="lazy"
+    />
+    <div
+      className={
+        styles.loginContainer +
+        ' d-flex align-items-center justify-content-center flex-column w-50 ms-5'
+      }
+    >
+      <div className="d-flex flex-column align-items-start">
+        <span className="mb-2">Login</span>
+        <form
+          className={
+            styles.titleContainer + ' p-3 d-flex flex-column align-items-start'
+          }
+        >
+          <label className={styles.user + ' mb-2'}>Usuario</label>
+          <input type="text" id="user" name="user" className="mb-2" />
+          <label className={styles.password + ' mb-2'}>Contrase&ntilde;a</label>
+          <input type="password" id="pwd" name="pwd" className="mb-4" />
+          <div className="w-100 text-center">
+            <button className={styles.button + ' btn btn-primary rounded'}>
+              Entrar
+            </button>
           </div>
-          <div className="d-flex align-items-center flex-column">
-            <div className={styles.loginContainer}>Login</div>
-            <div className={styles.titleContainer}>
-              <form>
-                <label className={styles.user} htmlFor="user">
-                  Usuario
-                </label>
-                <br />
-                <input type="text" id="user" name="user" />
-                <br />
-                <label className={styles.password} htmlFor="pwd">
-                  Contrase&ntilde;a
-                </label>
-                <br />
-                <input type="password" id="pwd" name="pwd" />
-                <br />
-                <button className={styles.button} type="submit">
-                  Entrar
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
+        </form>
       </div>
     </div>
   </div>
