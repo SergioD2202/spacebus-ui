@@ -9,7 +9,7 @@ const Auth: FC<AuthProps> = () => (
   <div
     className={
       styles.Auth +
-      ' d-flex align-items-center align-items-lg-start justify-content-lg-between w-100'
+      ' d-flex align-items-center justify-content-center align-items-lg-start justify-content-lg-between w-100'
     }
     data-testid="Auth"
   >
