@@ -8,23 +8,36 @@ const navbarStyles =
 const signUpStyles = ' btn btn-warning text-dark text-center p-1';
 const signInStyles = ' btn btn-info text-light text-center p-1';
 
+const isSignedUp = true;
+
 interface NavbarProps {}
 
 const Navbar: FC<NavbarProps> = () => (
   <div className={styles.Navbar + navbarStyles}>
-    <div className="d-flex align-items-center" data-testid="Navbar">
-      <img src={logo} className={styles.logo} alt="logo.svg" loading="lazy" />
-      <span className={styles.name}>Spacebus</span>
-    </div>
+    <a href="/spacebus-ui" className={styles.link}>
+      <div className="d-flex align-items-center" data-testid="Navbar">
+        <img src={logo} className={styles.logo} alt="logo.svg" loading="lazy" />
+        <span className={styles.name}>Spacebus</span>
+      </div>
+    </a>
 
-    <div>
-      <button type="button" className={styles.loginButtons + signInStyles}>
-        Sign In
-      </button>
-      <button type="button" className={styles.loginButtons + signUpStyles}>
-        Sign Up
-      </button>
-    </div>
+    {isSignedUp ? (
+      <a href="/spacebus-ui/profile" className={styles.link}>
+        <div className={styles.userIcon}>
+          <div className={styles.profilePicPlaceholder}></div>
+          <span>Username</span>
+        </div>
+      </a>
+    ) : (
+      <div>
+        <button type="button" className={styles.loginButtons + signInStyles}>
+          Sign In
+        </button>
+        <button type="button" className={styles.loginButtons + signUpStyles}>
+          Sign Up
+        </button>
+      </div>
+    )}
   </div>
 );
 
