@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 import TicketList from '../../shared/TicketList/TicketList';
-import styles from './PurchasedTickets.module.scss';
+import styles from './PurchaseTicket.module.scss';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface PurchasedTicketsProps {}
+interface PurchaseTicketProps {}
 
 const test: object[] = [
   {
@@ -59,11 +59,13 @@ const test: object[] = [
   },
 ];
 
-const PurchasedTickets: FC<PurchasedTicketsProps> = () => (
-  <div className={styles.PurchasedTickets} data-testid="PurchasedTickets">
-    <span className={styles.title + ' text-info mb-3'}>Tickets comprados</span>
-    <TicketList ticketArray={test} mode="read-only" />
+const PurchaseTicket: FC<PurchaseTicketProps> = () => (
+  <div className={styles.PurchaseTicket} data-testid="PurchaseTicket">
+    <span className={styles.title + ' text-info mb-3'}>
+      Resultados de Tickets Disponibles
+    </span>
+    <TicketList ticketArray={test} mode="on-sale" />
   </div>
 );
 
-export default PurchasedTickets;
+export default PurchaseTicket;

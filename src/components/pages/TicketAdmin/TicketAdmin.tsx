@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 import TicketList from '../../shared/TicketList/TicketList';
-import styles from './PurchasedTickets.module.scss';
+import styles from './TicketAdmin.module.scss';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface PurchasedTicketsProps {}
+interface TicketAdminProps {}
 
-const test: object[] = [
+const test: any[] = [
   {
     id: 9,
     description: 'viajar fuera del planeta tierra',
@@ -59,11 +59,16 @@ const test: object[] = [
   },
 ];
 
-const PurchasedTickets: FC<PurchasedTicketsProps> = () => (
-  <div className={styles.PurchasedTickets} data-testid="PurchasedTickets">
-    <span className={styles.title + ' text-info mb-3'}>Tickets comprados</span>
-    <TicketList ticketArray={test} mode="read-only" />
+const TicketAdmin: FC<TicketAdminProps> = () => (
+  <div className={styles.TicketAdmin} data-testid="TicketAdmin">
+    <span className={styles.title + ' text-info mb-3'}>
+      Administra los tickets de {test[0].rocketLaunche.spacecraftCompany.name}
+    </span>
+    <div className="d-flex align-items-center justify-content-start w-75 mx-auto mb-4">
+      <button className="p-2 btn btn-success">Crear Ticket</button>
+    </div>
+    <TicketList ticketArray={test} mode="editor" />
   </div>
 );
 
-export default PurchasedTickets;
+export default TicketAdmin;

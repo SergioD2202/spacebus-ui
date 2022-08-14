@@ -4,6 +4,7 @@ import styles from './TicketList.module.scss';
 
 interface TicketListProps {
   ticketArray?: any | undefined;
+  mode?: string;
 }
 const TicketList: FC<TicketListProps> = (props) => (
   <div className={styles.TicketList + ' w-100'} data-testid="TicketList">
@@ -15,7 +16,7 @@ const TicketList: FC<TicketListProps> = (props) => (
           launchDate={el.rocketLaunche.launchDate}
           companyName={el.rocketLaunche.spacecraftCompany.name}
           companyLogo={el.rocketLaunche.spacecraftCompany.logo}
-          isPurchaseAvailable={false}
+          mode={props.mode ? props.mode : 'read-only'}
         />
       </div>
     ))}

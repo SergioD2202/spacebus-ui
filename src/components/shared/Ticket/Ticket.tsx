@@ -8,7 +8,7 @@ interface TicketProps {
   launchDate?: string | Date;
   companyName?: string;
   companyLogo?: string;
-  isPurchaseAvailable?: boolean;
+  mode?: string;
 }
 
 const Ticket: FC<TicketProps> = (props) => (
@@ -37,10 +37,17 @@ const Ticket: FC<TicketProps> = (props) => (
 
     <h1>{props.price}$</h1>
 
-    {props.isPurchaseAvailable ? (
-      <div>
+    {props.mode === 'read-only' ? (
+      <></>
+    ) : props.mode === 'on-sale' ? (
+      <>
         <button className="p-2 btn btn-outline-success">Comprar</button>
-      </div>
+      </>
+    ) : props.mode === 'editor' ? (
+      <>
+        <button className="p-2 btn btn-outline-info">Actualizar</button>
+        <button className="p-2 btn btn-outline-danger">Anular</button>
+      </>
     ) : (
       <></>
     )}
