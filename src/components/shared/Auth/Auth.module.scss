@@ -45,6 +45,16 @@ $phone: 650px;
             color: #FFFFFF;
         }
 
+        .inputField {
+            input[type="text"] input[type="password"] {
+                width: 85%;
+                height: 44px;
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+        
         @media (max-width: 1110px) {
             width: 340px;
             height: 320px;

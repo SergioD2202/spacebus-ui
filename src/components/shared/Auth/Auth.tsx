@@ -33,9 +33,19 @@ const Auth: FC<AuthProps> = () => (
           }
         >
           <label className={styles.user + ' mb-2'}>Usuario</label>
-          <input type="text" id="user" name="user" className="mb-2" />
+          <input
+            type="text"
+            id="user"
+            name="user"
+            className={styles.inputField + ' mb-2 border border-light'}
+          />
           <label className={styles.password + ' mb-2'}>Contrase&ntilde;a</label>
-          <input type="password" id="pwd" name="pwd" className="mb-4" />
+          <input
+            type="password"
+            id="pwd"
+            name="pwd"
+            className={styles.inputField + ' mb-4 border border-light'}
+          />
           <div className="w-100 text-center">
             <button className={styles.button + ' btn btn-primary rounded'}>
               Entrar
