@@ -13,6 +13,8 @@ import Signup from './components/pages/Signup/Signup';
 import Login from './components/pages/Login/Login';
 import Profile from './components/pages/Profile/Profile';
 import PurchasedTickets from './components/pages/PurchasedTickets/PurchasedTickets';
+import PurchaseTicket from './components/pages/PurchaseTicket/PurchaseTicket';
+import TicketAdmin from './components/pages/TicketAdmin/TicketAdmin';
 
 function App() {
   return (
@@ -32,6 +34,16 @@ function App() {
             element={
               true ? <PurchasedTickets /> : <Navigate to="/spacebus-ui/" />
             }
+          />
+          <Route
+            path="/spacebus-ui/purchase-ticket"
+            element={
+              true ? <PurchaseTicket /> : <Navigate to="/spacebus-ui/" />
+            }
+          />
+          <Route
+            path="/spacebus-ui/ticket-admin"
+            element={true ? <TicketAdmin /> : <Navigate to="/spacebus-ui" />}
           />
           <Route
             path="/spacebus-ui/error"

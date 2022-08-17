@@ -3,19 +3,30 @@ import styles from './Ticket.module.scss';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface TicketProps {
+  id?: number;
   description?: string;
   price?: number;
   launchDate?: string | Date;
   companyName?: string;
   companyLogo?: string;
-  isPurchaseAvailable?: boolean;
+  mode?: string;
 }
+
+const buyTicket = (ticketId: number | undefined) => {
+  const acceptBuy = confirm(
+    '¿está seguro de comprar el ticket ' + ticketId + '?'
+  );
+
+  if (acceptBuy) {
+    alert('compra realizada!');
+  }
+};
 
 const Ticket: FC<TicketProps> = (props) => (
   <div
     className={
       styles.Ticket +
-      ' shadow rounded p-2 border border-primary d-flex justify-content-between align-items-center'
+      ' shadow rounded p-4 border border-primary d-flex flex-md-row flex-column justify-content-between align-items-center'
     }
     data-testid="Ticket"
   >
@@ -37,10 +48,26 @@ const Ticket: FC<TicketProps> = (props) => (
 
     <h1>{props.price}$</h1>
 
-    {props.isPurchaseAvailable ? (
-      <div>
-        <button className="p-2 btn btn-outline-success">Comprar</button>
-      </div>
+    {props.mode === 'read-only' ? (
+      <></>
+    ) : props.mode === 'on-sale' ? (
+      <>
+        <button
+          className="p-2 btn btn-outline-success"
+          onClick={() => buyTicket(props.id)}
+        >
+          Comprar
+        </button>
+      </>
+    ) : props.mode === 'editor' ? (
+      <>
+        <div className="d-flex flex-md-row flex-column">
+          <button className="p-2 btn btn-outline-info mb-2 ms-2">
+            Actualizar
+          </button>
+          <button className="p-2 btn btn-outline-danger ms-2">Anular</button>
+        </div>
+      </>
     ) : (
       <></>
     )}

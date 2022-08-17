@@ -25,7 +25,10 @@ const Options: FC<OptionsProps> = (props) => {
             Tickets comprados
           </a>
 
-          <a href="" className={styles.option + ' text-info'}>
+          <a
+            href="/spacebus-ui/purchase-ticket"
+            className={styles.option + ' text-info'}
+          >
             Comprar Tickets
           </a>
         </div>
@@ -43,16 +46,11 @@ const Options: FC<OptionsProps> = (props) => {
         >
           <span className={styles.title + ' text-primary'}>Opciones</span>
 
-          <a href="" className={styles.option + ' text-info'}>
-            Crear Ticket
-          </a>
-
-          <a href="" className={styles.option + ' text-info'}>
-            Anular Ticket
-          </a>
-
-          <a href="" className={styles.option + ' text-info'}>
-            Lista de Tickets
+          <a
+            href="/spacebus-ui/ticket-admin"
+            className={styles.option + ' text-info'}
+          >
+            Administrador de Tickets
           </a>
         </div>
       </>
