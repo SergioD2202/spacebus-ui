@@ -11,6 +11,7 @@ const TicketList: FC<TicketListProps> = (props) => (
     {props.ticketArray.map((el: any, index: number) => (
       <div className="mb-5" key={index}>
         <Ticket
+          id={el.id}
           description={el.description}
           price={el.price}
           launchDate={el.rocketLaunche.launchDate}

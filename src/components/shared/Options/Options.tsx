@@ -46,7 +46,10 @@ const Options: FC<OptionsProps> = (props) => {
         >
           <span className={styles.title + ' text-primary'}>Opciones</span>
 
-          <a href="" className={styles.option + ' text-info'}>
+          <a
+            href="/spacebus-ui/ticket-admin"
+            className={styles.option + ' text-info'}
+          >
             Administrador de Tickets
           </a>
         </div>

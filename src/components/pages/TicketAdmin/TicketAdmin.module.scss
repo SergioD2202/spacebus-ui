@@ -1,3 +1,7 @@
+$primary: #00266b;
+
+@import '~bootstrap/scss/bootstrap.scss';
+
 .TicketAdmin {
     display: flex;
     flex-direction: column;
@@ -10,5 +14,13 @@
     .title {
         font-size: 26px;
         text-align: center;
+    }
+
+    .datepicker {
+
+        input {
+            @extend .form-control;
+            @extend .w-25
+        }
     }
 }

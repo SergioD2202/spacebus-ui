@@ -7,6 +7,7 @@ const navbarStyles =
   ' bg-primary d-flex align-items-center justify-content-between';
 const signUpStyles = ' btn btn-warning text-dark text-center p-1';
 const signInStyles = ' btn btn-info text-light text-center p-1';
+const logOutStyles = ' btn btn-danger text-light text-center p-1';
 
 const isSignedUp = true;
 
@@ -25,7 +26,11 @@ const Navbar: FC<NavbarProps> = () => (
       <a href="/spacebus-ui/profile" className={styles.link}>
         <div className={styles.userIcon}>
           <div className={styles.profilePicPlaceholder}></div>
-          <span>Username</span>
+          <span className="ms-1">Username</span>
+          <span className="ms-1">Balance</span>
+          <button type="button" className={styles.loginButtons + logOutStyles}>
+            Log Out
+          </button>
         </div>
       </a>
     ) : (
