@@ -12,6 +12,8 @@
 /build
 
 # misc
+/src/serverPort.json
+.env
 .DS_Store
 .env.local
 .env.development.local

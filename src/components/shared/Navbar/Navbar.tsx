@@ -9,7 +9,7 @@ const signUpStyles = ' btn btn-warning text-dark text-center p-1';
 const signInStyles = ' btn btn-info text-light text-center p-1';
 const logOutStyles = ' btn btn-danger text-light text-center p-1';
 
-const isSignedUp = true;
+const isSignedUp = false;
 
 interface NavbarProps {}
 
@@ -35,12 +35,20 @@ const Navbar: FC<NavbarProps> = () => (
       </a>
     ) : (
       <div>
-        <button type="button" className={styles.loginButtons + signInStyles}>
+        <a
+          href="/spacebus-ui/login"
+          type="button"
+          className={styles.loginButtons + signInStyles}
+        >
           Sign In
-        </button>
-        <button type="button" className={styles.loginButtons + signUpStyles}>
+        </a>
+        <a
+          href="/spacebus-ui/sign-up"
+          type="button"
+          className={styles.loginButtons + signUpStyles}
+        >
           Sign Up
-        </button>
+        </a>
       </div>
     )}
   </div>

@@ -7,7 +7,7 @@ interface LoginProps {}
 
 const Login: FC<LoginProps> = () => (
   <>
-    <Auth />
+    <Auth type="login" />
   </>
 );
 

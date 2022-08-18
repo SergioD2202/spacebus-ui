@@ -1,13 +1,14 @@
 /* eslint-disable @typescript-eslint/no-empty-interface */
 import React, { FC } from 'react';
+import Auth from '../../shared/Auth/Auth';
 import styles from './Signup.module.scss';
 
 interface SignupProps {}
 
 const Signup: FC<SignupProps> = () => (
-  <div className={styles.Signup} data-testid="Signup">
-    Signup Component
-  </div>
+  <>
+    <Auth type="register" />
+  </>
 );
 
 export default Signup;

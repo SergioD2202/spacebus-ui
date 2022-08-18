@@ -12,6 +12,12 @@ $phone: 650px;
         object-fit: cover;
     }
 
+    .mainImageRegister {
+        width: 65%;
+        height: 769px;
+        object-fit: cover;
+    }
+
     .loginContainer {
         font-weight: 700;
         font-size: 26px;
@@ -20,6 +26,38 @@ $phone: 650px;
         @media (max-width: $phone) {
             width: 310px;
             height: 31px;
+        }
+    }
+
+    .registerContainer {
+        width: 390px;
+        color: #00266B;
+        font-weight: 600;
+        font-size: 14px;
+        background-color: #F8F9FA;
+        border-radius: 16px;
+
+        .button {
+            width: 115px;
+            height: 46px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .inputField {
+            width: 85%;
+            height: 44px;
+            &:focus {
+                outline: none;
+            }
+        }
+        
+        @media (max-width: 1110px) {
+            width: 340px;
+        }
+
+        @media (max-width: 992px) {
+            width: 372px;
         }
     }
 
@@ -32,12 +70,6 @@ $phone: 650px;
         background-color: #F8F9FA;
         border-radius: 16px;
 
-        .user {
-        }
-
-        .password {
-        }
-
         .button {
             width: 115px;
             height: 46px;
@@ -46,12 +78,10 @@ $phone: 650px;
         }
 
         .inputField {
-            input[type="text"] input[type="password"] {
-                width: 85%;
-                height: 44px;
-                &:focus {
-                    outline: none;
-                }
+            width: 85%;
+            height: 44px;
+            &:focus {
+                outline: none;
             }
         }
         
@@ -63,14 +93,6 @@ $phone: 650px;
         @media (max-width: 992px) {
             width: 372px;
             height: 342px;
-        }
-
-        @media (max-width: $phone) {
-            .user {
-            }
-
-            .password {
-            }
         }
     }
 }
