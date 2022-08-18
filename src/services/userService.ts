@@ -10,13 +10,13 @@ const isUserLoggedIn = () => {
 };
 
 const login = (loginData: any) => {
-  fetch(`${BASE_URL}/aut/signin`, {
+  return fetch(`${BASE_URL}/aut/signin`, {
     method: 'POST',
     headers: {
       accept: '*/*',
       'Content-Type': 'application/json',
     },
-    body: loginData,
+    body: JSON.stringify(loginData),
   })
     .then(async (response) => {
       if (response.ok) {
@@ -30,11 +30,12 @@ const login = (loginData: any) => {
 };
 
 const getUserInfo = () => {
-  return fetch(`${BASE_URL}/aut/me`, {
+  return fetch(`${BASE_URL}/profile/me`, {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: `Bearer ${localStorage.getItem('user')}`,
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer ' + localStorage.getItem('user'),
     },
   });
 };

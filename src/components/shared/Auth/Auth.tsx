@@ -32,9 +32,11 @@ const Auth: FC<AuthProps> = (props) => {
     await login({
       username: loginData.loginUser,
       password: loginData.loginPassword,
+    }).then(async () => {
+      const userData = await getUserInfo();
+      setUser(userData);
+      navigator('/spacebus-ui/');
     });
-    setUser(getUserInfo());
-    navigator('/spacebus-ui/');
   };
 
   useEffect(() => {
