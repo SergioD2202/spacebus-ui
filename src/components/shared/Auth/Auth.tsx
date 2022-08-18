@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useContext, useEffect, useState } from 'react';
 import styles from './Auth.module.scss';
 import space from '../../../images/space.jpg';
 import {
@@ -6,6 +6,9 @@ import {
   getPlanets,
   getIdenTypes,
 } from '../../../services/publicService';
+import { DataContext } from '../../../context/DataContext';
+import { login, getUserInfo } from '../../../services/userService';
+import { useNavigate } from 'react-router-dom';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface AuthProps {
@@ -18,6 +21,21 @@ const Auth: FC<AuthProps> = (props) => {
   const [countries, setCountries] = useState([]);
   const [idenTypes, setIdenTypes] = useState([]);
   const [isNextPage, setIsNextPage] = useState(false);
+  const [loginUser, setLoginUser] = useState('');
+  const [loginPassword, setLoginPassword] = useState('');
+  const { setUser } = useContext(DataContext);
+  const navigator = useNavigate();
+
+  const handleChange = (el: any, setFunction: any) => setFunction(el);
+
+  const loginHandle = async (loginData: any) => {
+    await login({
+      username: loginData.loginUser,
+      password: loginData.loginPassword,
+    });
+    setUser(getUserInfo());
+    navigator('/spacebus-ui/');
+  };
 
   useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -72,6 +90,8 @@ const Auth: FC<AuthProps> = (props) => {
               id="user"
               name="user"
               className={styles.inputField + ' mb-2 border border-light'}
+              value={loginUser}
+              onChange={(e) => handleChange(e.target.value, setLoginUser)}
             />
             <label className={' mb-2'}>Contrase&ntilde;a</label>
             <input
@@ -79,9 +99,15 @@ const Auth: FC<AuthProps> = (props) => {
               id="pwd"
               name="pwd"
               className={styles.inputField + ' mb-4 border border-light'}
+              value={loginPassword}
+              onChange={(e) => handleChange(e.target.value, setLoginPassword)}
             />
             <div className="w-100 text-center">
-              <button className={styles.button + ' btn btn-primary rounded'}>
+              <button
+                type="button"
+                className={styles.button + ' btn btn-primary rounded'}
+                onClick={() => loginHandle({ loginUser, loginPassword })}
+              >
                 Entrar
               </button>
             </div>
