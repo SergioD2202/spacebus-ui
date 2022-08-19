@@ -3,6 +3,7 @@ import React, { FC, useContext } from 'react';
 import styles from './Navbar.module.scss';
 import logo from '../../../images/rocket logo.svg';
 import { DataContext } from '../../../context/DataContext';
+import { useNavigate } from 'react-router-dom';
 
 const navbarStyles =
   ' bg-primary d-flex align-items-center justify-content-between';
@@ -13,7 +14,17 @@ const logOutStyles = ' btn btn-danger text-light text-center p-1';
 interface NavbarProps {}
 
 const Navbar: FC<NavbarProps> = () => {
-  const { user } = useContext(DataContext);
+  const { user, setUser } = useContext(DataContext);
+  const navigator = useNavigate();
+
+  const logout = () => {
+    localStorage.removeItem('userToken');
+    localStorage.removeItem('user');
+
+    setUser(null);
+
+    navigator('/spacebus-ui/');
+  };
 
   return (
     <div className={styles.Navbar + navbarStyles}>
@@ -30,19 +41,23 @@ const Navbar: FC<NavbarProps> = () => {
       </a>
 
       {user ? (
-        <a href="/spacebus-ui/profile" className={styles.link}>
-          <div className={styles.userIcon}>
+        <div className={styles.userIcon}>
+          <a
+            href="/spacebus-ui/profile"
+            className={styles.link + ' d-flex align-items-center'}
+          >
             <div className={styles.profilePicPlaceholder}></div>
-            <span className="ms-1">{user.username}</span>
-            <span className="ms-1">Balance</span>
-            <button
-              type="button"
-              className={styles.loginButtons + logOutStyles}
-            >
-              Log Out
-            </button>
-          </div>
-        </a>
+            <span className="ms-1">{user.user.username}</span>
+            <span className="ms-1">{user.balance ? user.balance : 0}$</span>
+          </a>
+          <button
+            type="button"
+            className={styles.loginButtons + logOutStyles}
+            onClick={() => logout()}
+          >
+            Log Out
+          </button>
+        </div>
       ) : (
         <div>
           <a

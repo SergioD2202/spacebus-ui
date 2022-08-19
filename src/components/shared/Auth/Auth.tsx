@@ -10,7 +10,6 @@ import { DataContext } from '../../../context/DataContext';
 import { login, getUserInfo } from '../../../services/userService';
 import { useNavigate } from 'react-router-dom';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface AuthProps {
   type?: string;
   children?: React.ReactNode;
@@ -34,7 +33,9 @@ const Auth: FC<AuthProps> = (props) => {
       password: loginData.loginPassword,
     }).then(async () => {
       const userData = await getUserInfo();
-      setUser(userData);
+      const result = await userData.json();
+      localStorage.setItem('user', JSON.stringify(result));
+      setUser(result);
       navigator('/spacebus-ui/');
     });
   };

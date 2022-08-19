@@ -21,8 +21,8 @@ function App() {
   return (
     <DataProvider>
       <div className="App">
-        <Navbar />
         <BrowserRouter>
+          <Navbar />
           <Routes>
             <Route path="/spacebus-ui/" element={<Home />} />
             <Route path="/spacebus-ui/sign-up" element={<Signup />} />
@@ -52,8 +52,8 @@ function App() {
               element={<div>Error in the page</div>}
             />
           </Routes>
+          <Footer />
         </BrowserRouter>
-        <Footer />
       </div>
     </DataProvider>
   );

@@ -8,7 +8,10 @@ interface DataContextProps {
 }
 
 export const DataProvider: FC<DataContextProps> = (props) => {
-  const [user, setUser] = useState(isUserLoggedIn());
+  const stringUser: any = localStorage.getItem('user')
+    ? localStorage.getItem('user')
+    : '';
+  const [user, setUser] = useState(stringUser ? JSON.parse(stringUser) : null);
   return (
     <DataContext.Provider value={{ user, setUser }}>
       {' '}

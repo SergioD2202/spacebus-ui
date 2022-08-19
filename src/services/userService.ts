@@ -21,7 +21,7 @@ const login = (loginData: any) => {
     .then(async (response) => {
       if (response.ok) {
         const result = await response.json();
-        localStorage.setItem('user', result.token);
+        localStorage.setItem('userToken', result.token);
       }
     })
     .catch((error) => {
@@ -35,7 +35,7 @@ const getUserInfo = () => {
     headers: {
       accept: 'application/json',
       'Content-Type': 'application/json',
-      Authorization: 'Bearer ' + localStorage.getItem('user'),
+      Authorization: 'Bearer ' + localStorage.getItem('userToken'),
     },
   });
 };
