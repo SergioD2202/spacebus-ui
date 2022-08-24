@@ -19,9 +19,15 @@ const login = (loginData: any) => {
     body: JSON.stringify(loginData),
   })
     .then(async (response) => {
-      if (response.ok) {
+      if (response.status >= 200 && response.status < 300) {
         const result = await response.json();
         localStorage.setItem('userToken', result.token);
+
+        return true;
+      }
+
+      if (response.status >= 400 && response.status < 500) {
+        return false;
       }
     })
     .catch((error) => {
